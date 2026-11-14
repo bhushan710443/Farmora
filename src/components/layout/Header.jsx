@@ -1,6 +1,7 @@
+import farmoraLogo from "../../assets/FARMORA_Logo.png";
+import AddressSelector from "../common/AddressSelector";
 
 import {
-  Sprout,
   ShoppingCart,
   MapPin,
   UserRound
@@ -22,22 +23,19 @@ function Header({
 
         {/* Farmora Logo */}
         <div className="header-logo">
-          <Sprout size={35} />
-
-          <div>
-            <h2>Farmora</h2>
-            <span>Grow More. Live Better.</span>
-          </div>
+             <img
+               src={farmoraLogo}
+               alt="Farmora Logo"
+              className="logo-image"
+            />
         </div>
 
-        {/* Delivery Location */}
-        <div className="delivery-location">
-          <MapPin size={20} />
 
-          <div>
-            <span>Delivering to</span>
-            <strong>Pune, Maharashtra</strong>
-          </div>
+        {/* Delivery Location */}
+
+        <div>
+          <span>Delivering to</span>
+          <AddressSelector />
         </div>
 
         {/* Reusable Search Component */}

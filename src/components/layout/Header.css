@@ -24,15 +24,13 @@
 .header-logo {
   display: flex;
   align-items: center;
-  gap: 9px;
-  color: #218838;
-  flex-shrink: 0;
+  gap: 10px;
 }
 
-.header-logo h2 {
-  margin: 0;
-  font-size: 25px;
-  font-weight: 800;
+.logo-image {
+  width: 200px;
+  height: 150px;
+  object-fit: contain;
 }
 
 .header-logo span {
