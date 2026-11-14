@@ -1,0 +1,134 @@
+
+.farmora-header {
+  width: 100%;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-container {
+  max-width: 1450px;
+  margin: auto;
+  padding: 16px 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+/* Logo */
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #218838;
+  flex-shrink: 0;
+}
+
+.header-logo h2 {
+  margin: 0;
+  font-size: 25px;
+  font-weight: 800;
+}
+
+.header-logo span {
+  font-size: 10px;
+  color: #777;
+}
+
+/* Location */
+
+.delivery-location {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #218838;
+  flex-shrink: 0;
+}
+
+.delivery-location div {
+  display: flex;
+  flex-direction: column;
+}
+
+.delivery-location span {
+  font-size: 11px;
+  color: #777;
+}
+
+.delivery-location strong {
+  font-size: 13px;
+  color: #222;
+}
+
+/* Header Actions */
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-shrink: 0;
+}
+
+.header-action {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  background: transparent;
+  border: none;
+
+  color: #333;
+  font-size: 14px;
+
+  cursor: pointer;
+}
+
+.header-action:hover {
+  color: #218838;
+}
+
+/* Responsive */
+
+@media (max-width: 1050px) {
+  .header-container {
+    flex-wrap: wrap;
+    padding: 15px 20px;
+  }
+
+  .delivery-location {
+    display: none;
+  }
+
+  .header-container > .search-bar {
+    order: 3;
+    flex-basis: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .header-container {
+    gap: 15px;
+    padding: 12px;
+  }
+
+  .header-logo {
+    flex: 1;
+  }
+
+  .header-logo h2 {
+    font-size: 21px;
+  }
+
+  .header-actions {
+    gap: 10px;
+  }
+
+  .header-action span {
+    display: none;
+  }
+}
