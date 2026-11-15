@@ -32,9 +32,7 @@ function Header({
 
 
         {/* Delivery Location */}
-
         <div>
-          <span>Delivering to</span>
           <AddressSelector />
         </div>
 

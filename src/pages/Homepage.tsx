@@ -11,18 +11,12 @@ function Homepage() {
   // Called when user submits search
   const handleSearch = (query: string) => {
     console.log("Searching Farmora for:", query);
-
     // Later we will call Product Search API here
   };
 
   return (
     <div>
 
-      <Header
-        searchValue={searchValue}
-        onSearchChange={setSearchValue}
-        onSearch={handleSearch}
-      />
 
       <main className="homepage-content">
 
