@@ -1,18 +1,9 @@
 
 import { useState } from "react";
 
-import Header from "../components/layout/Header";
 
 function Homepage() {
 
-  // Shared search state
-  const [searchValue, setSearchValue] = useState("");
-
-  // Called when user submits search
-  const handleSearch = (query: string) => {
-    console.log("Searching Farmora for:", query);
-    // Later we will call Product Search API here
-  };
 
   return (
     <div>
@@ -20,8 +11,7 @@ function Homepage() {
 
       <main className="homepage-content">
 
-        <h1>Welcome to Farmora 🌱</h1>
-
+        <h4>Welcome to Farmora 🌱</h4>
         <p>
           Everything your farm needs, in one place.
         </p>

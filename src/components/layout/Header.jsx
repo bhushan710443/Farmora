@@ -1,11 +1,8 @@
 import farmoraLogo from "../../assets/FARMORA_Logo.png";
-import AddressSelector from "../common/AddressSelector";
+import { useNavigate } from "react-router-dom";
 
-import {
-  ShoppingCart,
-  MapPin,
-  UserRound
-} from "lucide-react";
+
+import { ShoppingCart, MapPin, UserRound, ArrowRight } from "lucide-react";
 
 import SearchBar from "../common/SearchBar";
 import "./Header.css";
@@ -16,24 +13,40 @@ function Header({
   onSearch
 }) {
 
+  const navigate = useNavigate();
+
+
   return (
     <header className="farmora-header">
+
 
       <div className="header-container">
 
         {/* Farmora Logo */}
-        <div className="header-logo">
-             <img
-               src={farmoraLogo}
-               alt="Farmora Logo"
-              className="logo-image"
-            />
-        </div>
+        <button
+          type="button"
+          className="header-logo"
+          onClick={() => navigate("/home")}
+          aria-label="Go to Farmora Home"
+        >
+          <img
+            src={farmoraLogo}
+            alt="Farmora Logo"
+            className="logo-image"
+          />
+        </button>
 
 
         {/* Delivery Location */}
         <div>
-          <AddressSelector />
+          <button
+            type="button"
+            className="address-btn"
+            onClick={() => navigate("/location")}>
+            <MapPin size={20} />
+            <span>Add Address</span>
+            <ArrowRight size={17} />
+          </button>
         </div>
 
         {/* Reusable Search Component */}
@@ -51,7 +64,11 @@ function Header({
             <span>Cart</span>
           </button>
 
-          <button className="header-action">
+          <button
+            type="button"
+            className="header-action"
+            onClick={() => navigate("/login")}
+          >
             <UserRound size={22} />
             <span>Login</span>
           </button>
